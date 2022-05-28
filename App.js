@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {AppRegistry, View} from 'react-native';
-import Routes from './config/Routes.js';
+import {AppRegistry} from 'react-native';
+import Routes from './src/config/Routes.js';
 
 class reactTutorialApp extends Component {
   render() {
