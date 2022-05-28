@@ -5,6 +5,7 @@ import NewPost from '../../assets/icons/new_post.svg';
 import Like from '../../assets/icons/like.svg';
 import Messenger from '../../assets/icons/messenger.svg';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Actions} from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,6 +32,9 @@ const styles = StyleSheet.create({
 });
 
 const Header = () => {
+  const goToPage = page => {
+    Actions.likes();
+  };
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -39,7 +43,7 @@ const Header = () => {
           <TouchableOpacity style={{marginRight: 10}}>
             <NewPost width="30px" height="30px" />
           </TouchableOpacity>
-          <TouchableOpacity style={{marginRight: 10}}>
+          <TouchableOpacity style={{marginRight: 10}} onPress={goToPage}>
             <Like width="30px" height="30px" />
           </TouchableOpacity>
           <TouchableOpacity>

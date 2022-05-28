@@ -2,6 +2,7 @@ import React from 'react';
 import {Router, Scene} from 'react-native-router-flux';
 import Home from '../pages/Home.js';
 import About from '../pages/About.js';
+import Likes from '../pages/Likes.js';
 
 const Routes = () => (
   <Router>
@@ -14,6 +15,7 @@ const Routes = () => (
         hideNavBar
       />
       <Scene key="about" component={About} title="About" />
+      <Scene key="likes" component={Likes} title="Likes" />
     </Scene>
   </Router>
 );
